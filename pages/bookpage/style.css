@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  overflow-y: hidden;
+  background-color: rgb(246, 237, 226);
+}
+
+#page  {
+  margin: 3%;
+  flex: 1 1 auto; /**stretch inside flexbox (container) to fill space**/
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+#meta {
+  flex: 0 1 auto; /**keep natural height**/
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 4px double black;
+}
+
+#meta--info {
+  display: flex;
+  gap: 10px;
+  font-style: italic;
+}
+
+.meta--txt {
+  margin-bottom: 5px;
+}
+
+#content {
+  flex: 1 1 auto; /**stretch inside parent flexbox (page) to fill space**/
+  display: flex;
+}
+
+#content--image-box {
+  min-width: 40vw;
+  margin: 3%;
+  margin-left: -3%;
+  background-color: bisque;
+  background-image: url('https://images.unsplash.com/photo-1455659817273-f96807779a8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+}
+
+#content--post {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  max-height: 75vh; /**scroll needs set height**/
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#content--post::-webkit-scrollbar {
+  display: none;
+}
+
+#content--post--title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#content--post--subtitle {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#content--post--article {
+  font-family: sans-serif;
+  line-height: 150%;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 30px;
+}
